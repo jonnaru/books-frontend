@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../app.scss";
 
 export const BookList = () => {
   const [page, setPage] = useState(1);
@@ -18,18 +19,21 @@ export const BookList = () => {
 
   console.log(books);
 
+  const handleOnClick = (step) => {
+    setPage((prev) => prev + step);
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div>
+    <main>
       {books.map((book) => (
-        <div>
+        <article>
           <p>{book.title}</p>
           <p>{book.authors}</p>
-        </div>
+        </article>
       ))}
-      <button onClick={() => setPage((prev) => prev + 1)}>next</button>
-      {page > 1 && (
-        <button onClick={() => setPage((prev) => prev - 1)}>back</button>
-      )}
-    </div>
+      {page > 1 && <button onClick={() => handleOnClick(-1)}>back</button>}
+      <button onClick={() => handleOnClick(1)}>next</button>
+    </main>
   );
 };
