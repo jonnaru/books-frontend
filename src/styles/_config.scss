@@ -1,0 +1,44 @@
+$secondaryFont: #fff;
+$primaryBackground: #f5f5f5;
+$secondaryBackground: #696969;
+$primaryFont: #808080;
+$primaryButton: blue;
+$fonstStack: Arial, Helvetica, sans-serif;
+
+@mixin test($border, $background) {
+  padding: 30px;
+  margin: 10px;
+  border: $border;
+  background: $background;
+}
+
+@function setTextColor($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #ccc;
+  }
+}
+
+@mixin setBackground($color) {
+  background: $color;
+  color: setTextColor($color);
+}
+
+// margin and padding classes
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  .p-#{$space} {
+    margin: #{$space}rem;
+  }
+  .py-#{$space} {
+    margin: #{$space}rem 0;
+  }
+}

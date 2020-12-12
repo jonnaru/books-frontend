@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../app.scss";
 
-export const BookList = () => {
+export const BookList = ({ setSelectedBookId }) => {
   const [page, setPage] = useState(1);
   const [books, setBooks] = useState([]);
 
@@ -19,6 +19,11 @@ export const BookList = () => {
 
   console.log(books);
 
+  const handleOnClickBook = (bookId) => {
+    setSelectedBookId(bookId);
+    console.log("clicked", bookId);
+  };
+
   const handleOnClick = (step) => {
     setPage((prev) => prev + step);
     window.scrollTo(0, 0);
@@ -28,8 +33,11 @@ export const BookList = () => {
     <main>
       {books.map((book) => (
         <article>
-          <p>{book.title}</p>
-          <p>{book.authors}</p>
+          <button onClick={() => handleOnClickBook(book.bookID)}>
+            <h2>{book.title}</h2>
+            <p>{book.authors}</p>
+            <p className="test">{book.average_rating}</p>
+          </button>
         </article>
       ))}
       {page > 1 && <button onClick={() => handleOnClick(-1)}>back</button>}

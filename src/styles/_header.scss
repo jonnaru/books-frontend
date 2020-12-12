@@ -1,0 +1,7 @@
+header {
+  h1 {
+    color: $primaryFont;
+  }
+  @include test(1px solid black, $primaryBackground);
+  color: setTextColor($secondaryBackground);
+}

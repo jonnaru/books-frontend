@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+  article {
+    @include test(2px solid #ccc, $secondaryBackground);
+    color: setTextColor($secondaryBackground);
+    width: 20%;
+    height: 300px;
+  }
+  .test {
+    color: $secondaryFont;
+  }
+  button {
+    background: $primaryButton;
+    &:hover {
+      background: lighten($primaryButton, 20%);
+    }
+  }
+}

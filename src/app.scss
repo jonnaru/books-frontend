@@ -1,32 +1,12 @@
-$myColor: #808080;
-$primaryButton: blue;
+@import "./styles/config";
+@import "./styles/header";
+@import "./styles/booklist";
 
-@mixin test($border, $background) {
-  padding: 30px;
-  margin: 10px;
-  border: $border;
-  background: $background;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $fonstStack;
 }
 
-@import "main";
-
-h1 {
-  color: $myColor;
-}
-
-header {
-  @include test(1px solid black, lightblue);
-  // @extend h1;
-}
-
-main {
-  article {
-    @include test(2px solid #ccc, mistyrose);
-  }
-  button {
-    background: $primaryButton;
-    &:hover {
-      background: lime;
-    }
-  }
-}
+@import "./styles/mobile";
