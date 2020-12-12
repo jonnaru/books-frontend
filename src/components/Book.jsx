@@ -19,7 +19,7 @@ export const Book = ({ selectedBookId, setSelectedBookId }) => {
 
   return (
     <>
-      <div>{theBook?.title}</div>
+      <div>{theBook?.title ?? "No book"}</div>
       <button onClick={() => setSelectedBookId(null)}>back</button>
     </>
   );
