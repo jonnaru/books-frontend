@@ -20,7 +20,7 @@ export const BookList = ({
       .then((data) => {
         setBooks(data);
       });
-  }, [URL]);
+  }, [URL, setBooks]);
 
   console.log(books);
 

@@ -20,6 +20,8 @@ main {
     text-align: left;
   }
   button {
+    border: none;
+    color: setTextColor($secondaryBackground);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,7 +34,8 @@ main {
     }
   }
   h2 {
-    padding: 50px 10px 15px;
+    margin: 0 auto;
+    padding: 50px 15px;
     text-align: center;
     font-size: 18px;
   }

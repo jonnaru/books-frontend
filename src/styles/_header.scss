@@ -1,7 +1,7 @@
 header {
-  h1 {
-    color: $primaryFont;
-  }
-  @include test(1px solid black, $primaryBackground);
+  @include test(1px solid black, $secondaryBackground);
   color: setTextColor($secondaryBackground);
+  h1 {
+    color: setTextColor($secondaryBackground);
+  }
 }

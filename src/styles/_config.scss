@@ -1,8 +1,8 @@
 $secondaryFont: #fff;
 $primaryBackground: #f5f5f5;
-$secondaryBackground: #696969;
+$secondaryBackground: #000;
 $primaryFont: #808080;
-$primaryButton: blue;
+$primaryButton: #000;
 $fonstStack: Arial, Helvetica, sans-serif;
 
 @mixin test($border, $background) {
@@ -16,7 +16,7 @@ $fonstStack: Arial, Helvetica, sans-serif;
   @if (lightness($color) > 70) {
     @return #333;
   } @else {
-    @return #ccc;
+    @return #fff;
   }
 }
 
