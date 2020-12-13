@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Footer = ({ page, setPage, books }) => {
+export const BookListFooter = ({ page, setPage, books }) => {
   const handleOnClick = (step) => {
     setPage((prev) => prev + step);
     window.scrollTo(0, 0);

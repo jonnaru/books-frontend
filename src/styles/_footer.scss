@@ -1,0 +1,8 @@
+footer {
+  button {
+    background: $primaryButton;
+    &:hover {
+      background: lighten($primaryButton, 20%);
+    }
+  }
+}

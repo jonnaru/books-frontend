@@ -1,20 +1,39 @@
 main {
   display: flex;
   flex-wrap: wrap;
+  margin: 20px 2%;
 
   article {
     @include test(2px solid #ccc, $secondaryBackground);
     color: setTextColor($secondaryBackground);
-    width: 20%;
-    height: 300px;
+    width: 25%;
+    height: 400px;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    background: none;
   }
-  .test {
+  .rated {
     color: $secondaryFont;
   }
+  .book-bottom-container {
+    text-align: left;
+  }
   button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: $primaryButton;
+    height: 100%;
+    width: 100%;
+
     &:hover {
       background: lighten($primaryButton, 20%);
     }
+  }
+  h2 {
+    padding: 50px 10px 15px;
+    text-align: center;
+    font-size: 18px;
   }
 }
