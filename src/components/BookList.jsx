@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../app.scss";
 
-export const BookList = ({ setSelectedBookId, author, limit }) => {
-  const [page, setPage] = useState(1);
-  const [books, setBooks] = useState([]);
-
+export const BookList = ({
+  books,
+  setBooks,
+  setSelectedBookId,
+  page,
+  author,
+  limit,
+}) => {
   const URL = `https://books-express.herokuapp.com/books?page=${page}&limit=${limit}&author=${author}`;
 
   useEffect(() => {
@@ -24,11 +28,6 @@ export const BookList = ({ setSelectedBookId, author, limit }) => {
     console.log("clicked", bookId);
   };
 
-  const handleOnClick = (step) => {
-    setPage((prev) => prev + step);
-    window.scrollTo(0, 0);
-  };
-
   return (
     <main>
       {books.map((book) => (
@@ -40,11 +39,6 @@ export const BookList = ({ setSelectedBookId, author, limit }) => {
           </button>
         </article>
       ))}
-      {page > 1 && <button onClick={() => handleOnClick(-1)}>back</button>}
-      {books.length > 0 && (
-        <button onClick={() => handleOnClick(1)}>next</button>
-      )}
-      {books.length === 0 && <p>No books</p>}
     </main>
   );
 };
