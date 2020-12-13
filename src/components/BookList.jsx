@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../app.scss";
 
-export const BookList = ({ setSelectedBookId, author }) => {
+export const BookList = ({ setSelectedBookId, author, limit }) => {
   const [page, setPage] = useState(1);
   const [books, setBooks] = useState([]);
 
-  const URL = `https://books-express.herokuapp.com/books?page=${page}&author=${author}`;
+  const URL = `https://books-express.herokuapp.com/books?page=${page}&limit=${limit}&author=${author}`;
 
   useEffect(() => {
     fetch(URL)
@@ -44,7 +44,7 @@ export const BookList = ({ setSelectedBookId, author }) => {
       {books.length > 0 && (
         <button onClick={() => handleOnClick(1)}>next</button>
       )}
-      {books.length === 0 && <p>the end</p>}
+      {books.length === 0 && <p>No books</p>}
     </main>
   );
 };

@@ -7,12 +7,17 @@ import { Book } from "./components/Book";
 export const App = () => {
   const [author, setAuthor] = useState("");
   const [selectedBookId, setSelectedBookId] = useState();
+  const [limit, setLimit] = useState(20);
 
   return (
     <div>
-      <Header setAuthor={setAuthor} />
+      <Header limit={limit} setLimit={setLimit} setAuthor={setAuthor} />
       {!selectedBookId ? (
-        <BookList author={author} setSelectedBookId={setSelectedBookId} />
+        <BookList
+          limit={limit}
+          author={author}
+          setSelectedBookId={setSelectedBookId}
+        />
       ) : (
         <Book
           selectedBookId={selectedBookId}
