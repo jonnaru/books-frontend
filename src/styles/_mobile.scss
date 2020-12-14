@@ -1,2 +1,33 @@
 @media (max-width: 688px) {
+  header {
+    h1 {
+      font-size: 20px;
+      padding: 20px 0;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  main {
+    width: 100%;
+    min-width: 350px;
+    article {
+      width: 100%;
+    }
+  }
+
+  footer {
+    min-width: 350px;
+  }
+  .book {
+    width: 350px;
+    margin: 0 auto 40px;
+  }
+
+  .book-border {
+    border-right: none;
+    border-bottom: none;
+    height: 0;
+    padding: 0;
+  }
 }

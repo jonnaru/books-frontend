@@ -1,29 +1,26 @@
 header {
   margin-bottom: 40px;
+
   h1 {
-    color: setTextColor($secondaryBackground);
     font-family: "Bungee Shade", cursive;
+    color: setTextColor($secondaryBackground);
     background: $secondaryBackground;
     font-size: 56px;
-    padding: 30px;
+    padding: 30px 4%;
     mix-blend-mode: darken;
   }
-  .bottom-header-container {
-    @include basicLayput(auto);
-    display: flex;
-    justify-content: space-between;
-  }
+
   input {
-    @include bottomHeaderBasic;
+    @include bottomHeaderBasic(20px 0 0 4%);
     @include basicInput;
-    width: 250px;
 
     &::placeholder {
       @include basicInput;
     }
   }
   select {
-    @include bottomHeaderBasic;
-    padding: 0 6px;
+    @include bottomHeaderBasic(6px 0 0 4%);
+    @include basicInput;
+    padding-left: 16px;
   }
 }

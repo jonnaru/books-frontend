@@ -12,6 +12,16 @@ main {
     margin: 0;
     padding: 10px;
   }
+  h2 {
+    @include title;
+  }
+  button {
+    @include basicButton;
+    @include basicFlex;
+
+    height: 100%;
+    width: 100%;
+  }
   .rated {
     color: $secondaryFont;
     margin-top: 6px;
@@ -24,17 +34,5 @@ main {
   .book-bottom-container {
     text-align: left;
     padding: 20px;
-  }
-  button {
-    @include basicButton;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-  }
-  h2 {
-    @include title;
   }
 }

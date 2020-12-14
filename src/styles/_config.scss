@@ -7,6 +7,12 @@ $secondaryFont: #fff;
 $primaryBackground: #f5f5f5;
 $secondaryBackground: #000;
 
+@mixin basicFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @mixin basicLayput($margin) {
   margin: $margin;
   max-width: 1500px;
@@ -29,6 +35,7 @@ $secondaryBackground: #000;
   font-family: $fonstStack;
   mix-blend-mode: darken;
   cursor: pointer;
+
   &:hover {
     background: lighten($primaryButton, 12%);
   }
@@ -46,14 +53,22 @@ $secondaryBackground: #000;
   text-transform: uppercase;
 }
 
-@mixin bottomHeaderBasic {
-  margin: 20px 40px;
+@mixin bottomHeaderBasic($margin) {
+  margin: $margin;
+  display: block;
+  width: 250px;
   height: 32px;
   background: none;
   border: 1px solid #000;
+
   &:focus {
     outline: none;
   }
+}
+
+@mixin setBackground($color) {
+  background: $color;
+  color: setTextColor($color);
 }
 
 @function setTextColor($color) {
@@ -64,12 +79,7 @@ $secondaryBackground: #000;
   }
 }
 
-@mixin setBackground($color) {
-  background: $color;
-  color: setTextColor($color);
-}
-
-// margin and padding classes
+// margin and padding classes (not used, keeping for ref)
 $spaceamounts: (1, 2, 3, 4, 5);
 
 @each $space in $spaceamounts {

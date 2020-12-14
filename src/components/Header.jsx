@@ -8,6 +8,7 @@ export const Header = ({ limit, setLimit, setAuthor }) => {
   return (
     <header>
       <h1>Hello happy book club!</h1>
+
       <div className="bottom-header-container">
         <input
           type="text"
@@ -19,10 +20,10 @@ export const Header = ({ limit, setLimit, setAuthor }) => {
           onChange={(event) => setLimit(event.target.value)}
           value={limit}
         >
-          <option value="20">20</option>
-          <option value="40">40</option>
-          <option value="60">60</option>
-          <option value="100">100</option>
+          <option value="20">20 books per page</option>
+          <option value="40">40 books per page</option>
+          <option value="60">60 books per page</option>
+          <option value="100">100 books per page</option>
         </select>
       </div>
     </header>
