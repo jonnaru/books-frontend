@@ -28,7 +28,6 @@ export const App = () => {
           setSelectedBookId={setSelectedBookId}
         />
       )}
-      {/* <BookListFooter page={page} setPage={setPage} books={books} /> */}
     </>
   );
 };

@@ -13,7 +13,7 @@ export const BookListFooter = ({ page, setPage, books }) => {
         {books.length > 0 && (
           <button onClick={() => handleOnClick(1)}>next</button>
         )}
-        {books.length === 0 && <p>No books</p>}
+        {books.length === 0 && <p>Sorry, no books found</p>}
       </div>
     </footer>
   );

@@ -3,10 +3,10 @@ header {
   h1 {
     color: setTextColor($secondaryBackground);
     font-family: "Bungee Shade", cursive;
-    background: black;
-    mix-blend-mode: darken;
+    background: $secondaryBackground;
     font-size: 56px;
     padding: 30px;
+    mix-blend-mode: darken;
   }
   .bottom-header-container {
     @include basicLayput(auto);
@@ -24,5 +24,6 @@ header {
   }
   select {
     @include bottomHeaderBasic;
+    padding: 0 6px;
   }
 }

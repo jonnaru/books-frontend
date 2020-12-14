@@ -37,6 +37,15 @@ $secondaryBackground: #000;
   }
 }
 
+@mixin title {
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
 @mixin bottomHeaderBasic {
   margin: 20px 40px;
   height: 32px;
