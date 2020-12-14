@@ -1,15 +1,50 @@
+$fonstStack: "Roboto", sans-serif;
+$primaryButton: #000;
+
+$primaryFont: #000;
 $secondaryFont: #fff;
+
 $primaryBackground: #f5f5f5;
 $secondaryBackground: #000;
-$primaryFont: #808080;
-$primaryButton: #000;
-$fonstStack: Arial, Helvetica, sans-serif;
 
-@mixin test($border, $background) {
-  padding: 30px;
-  margin: 10px;
-  border: $border;
-  background: $background;
+@mixin basicLayput($margin) {
+  margin: $margin;
+  max-width: 1500px;
+  min-width: 1100px;
+}
+
+@mixin basicInput {
+  font-family: "Roboto", sans-serif;
+  color: $primaryFont;
+  font-weight: 300;
+  font-size: 16px;
+  padding-left: 10px;
+  text-transform: lowercase;
+}
+
+@mixin basicButton {
+  border: none;
+  background: $primaryButton;
+  color: setTextColor($secondaryBackground);
+  font-family: $fonstStack;
+  mix-blend-mode: darken;
+  cursor: pointer;
+  &:hover {
+    background: lighten($primaryButton, 12%);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin bottomHeaderBasic {
+  margin: 20px 40px;
+  height: 32px;
+  background: none;
+  border: 1px solid #000;
+  &:focus {
+    outline: none;
+  }
 }
 
 @function setTextColor($color) {

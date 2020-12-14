@@ -1,7 +1,28 @@
 header {
-  @include test(1px solid black, $secondaryBackground);
-  color: setTextColor($secondaryBackground);
+  margin-bottom: 40px;
   h1 {
     color: setTextColor($secondaryBackground);
+    font-family: "Bungee Shade", cursive;
+    background: black;
+    mix-blend-mode: darken;
+    font-size: 56px;
+    padding: 30px;
+  }
+  .bottom-header-container {
+    @include basicLayput(auto);
+    display: flex;
+    justify-content: space-between;
+  }
+  input {
+    @include bottomHeaderBasic;
+    @include basicInput;
+    width: 250px;
+
+    &::placeholder {
+      @include basicInput;
+    }
+  }
+  select {
+    @include bottomHeaderBasic;
   }
 }

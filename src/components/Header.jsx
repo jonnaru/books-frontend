@@ -8,13 +8,23 @@ export const Header = ({ limit, setLimit, setAuthor }) => {
   return (
     <header>
       <h1>Hello happy book club!</h1>
-      <input type="text" onChange={(event) => handleOnChange(event)} />
-      <select onChange={(event) => setLimit(event.target.value)} value={limit}>
-        <option value="20">20</option>
-        <option value="40">40</option>
-        <option value="60">60</option>
-        <option value="100">100</option>
-      </select>
+      <div className="bottom-header-container">
+        <input
+          type="text"
+          placeholder="type your favourite author"
+          onChange={(event) => handleOnChange(event)}
+        />
+
+        <select
+          onChange={(event) => setLimit(event.target.value)}
+          value={limit}
+        >
+          <option value="20">20</option>
+          <option value="40">40</option>
+          <option value="60">60</option>
+          <option value="100">100</option>
+        </select>
+      </div>
     </header>
   );
 };

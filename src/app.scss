@@ -7,7 +7,29 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: $fonstStack;
+  animation: animatedGradient 20s ease infinite;
+}
+
+@keyframes animatedGradient {
+  0% {
+    background: orange;
+  }
+  25% {
+    background: lightskyblue;
+  }
+  50% {
+    background: pink;
+  }
+  75% {
+    background: MistyRose;
+  }
+  100% {
+    background: orange;
+  }
 }
 
 @import "./styles/mobile";

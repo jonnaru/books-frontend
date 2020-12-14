@@ -8,11 +8,13 @@ export const BookListFooter = ({ page, setPage, books }) => {
 
   return (
     <footer>
-      {page > 1 && <button onClick={() => handleOnClick(-1)}>back</button>}
-      {books.length > 0 && (
-        <button onClick={() => handleOnClick(1)}>next</button>
-      )}
-      {books.length === 0 && <p>No books</p>}
+      <div className="footer-button-container">
+        {page > 1 && <button onClick={() => handleOnClick(-1)}>back</button>}
+        {books.length > 0 && (
+          <button onClick={() => handleOnClick(1)}>next</button>
+        )}
+        {books.length === 0 && <p>No books</p>}
+      </div>
     </footer>
   );
 };
