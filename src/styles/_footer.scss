@@ -4,6 +4,8 @@ footer {
 
   .footer-button-container {
     margin: 0 10px;
+    display: flex;
+    justify-content: flex-end;
   }
   button {
     @include basicButton;

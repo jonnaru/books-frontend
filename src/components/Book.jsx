@@ -33,7 +33,7 @@ export const Book = ({ selectedBookId, setSelectedBookId }) => {
                         {theBook?.authors.replace(/-/g, ", ") ?? "No authors"}
                       </p>
                       <p>Rated {theBook?.average_rating ?? "No rating"} of 5</p>
-                      <p>{theBook?.num_pages ?? "No pages"}number of pages</p>
+                      <p>{theBook?.num_pages ?? "No pages"} number of pages</p>
                       <p>ISBN: {theBook?.isbn ?? "No isbn"}</p>
                     </div>
                     <button onClick={() => setSelectedBookId(null)}>
