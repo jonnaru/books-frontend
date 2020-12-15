@@ -12,5 +12,5 @@ Frontend showing data from API backend built with Node.js and Express.js. Data f
 
 ## View it live
 
-https://hello-countries-quiz.netlify.app/
-[Backend GitHub](https://github.com/jonnaru/project-express-api)
+- https://hello-countries-quiz.netlify.app/
+- [Backend GitHub](https://github.com/jonnaru/project-express-api)
